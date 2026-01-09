@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+         Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        // Upper half
+        for (int i = 0; i < n; i++) {
+            // Spaces
+            for (int s = n - i - 1; s > 0; s--) {
+                System.out.print(" ");
+            }
+            // Alphabets
+            for (int j = 0; j <= i; j++) {
+                System.out.print((char)('A' + j) + " ");
+            }
+            System.out.println();
+        }
+
+        // Lower half
+        for (int i = n - 2; i >= 0; i--) {
+            // Spaces
+            for (int s = n - i - 1; s > 0; s--) {
+                System.out.print(" ");
+            }
+            // Alphabets
+            for (int j = 0; j <= i; j++) {
+                System.out.print((char)('A' + j) + " ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
